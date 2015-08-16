@@ -16,5 +16,17 @@
   "license": "MIT",
   "dependencies": {
     "promise": "^7.0.4"
-  }
+  },  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mindspank/serializeapp.git"
+  },
+  "keywords": [
+    "qlik",
+    "qsocks"
+  ],
+  "bugs": {
+    "url": "https://github.com/mindspank/serializeapp/issues"
+  },
+  "homepage": "https://github.com/mindspank/serializeapp"
 }
