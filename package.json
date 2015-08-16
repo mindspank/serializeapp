@@ -1,0 +1,20 @@
+{
+  "name": "serializeapp",
+  "version": "1.0.0",
+  "description": "Serializes a Qlik Sense App into JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Karlsson <akl@qlik.com>",
+  "maintainers": [
+    {
+      "name": "Alexander Karlsson",
+      "email": "akl@qlik.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "promise": "^7.0.4"
+  }
+}
