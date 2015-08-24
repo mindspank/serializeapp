@@ -21,7 +21,7 @@ var serializeapp = require('serializeapp')
 
 qsocks.Connect().then(function(global) {
 	
-	global.openApp('Executive Dashboard')
+	global.openApp('Executive Dashboard.qvf')
 		.then(function(app) {
 			return serializeapp(app);
 		})
