@@ -4,7 +4,12 @@ serializeapp is a node utility module to serialize a Qlik Sense app into a JSON 
 Pass it a [qsocks](https://github.com/mindspank/qsocks) app class and it returns the JSON representation of that app.
 
 Returns a promise as standard but also accepts classical node style callbacks.  
-Verified to work in the browser using browserify or webpack.
+Verified to work in the browser using browserify or webpack.  
+
+##installing
+```
+npm install serializeapp
+```
 
 ##examples
 
