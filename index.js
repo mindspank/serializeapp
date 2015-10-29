@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/serializeApp');
+module.exports = require('./lib/serializeapp');
