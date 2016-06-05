@@ -1,6 +1,6 @@
 {
   "name": "serializeapp",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Serializes a Qlik Sense App into JSON",
   "main": "index.js",
   "scripts": {
