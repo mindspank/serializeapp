@@ -46,7 +46,7 @@ qsocks.Connect().then(function(global) {
 	measures: [], -> @Array - Array of [GenericMeasureProperties](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/GenericMeasureProperties.htm)
 	bookmarks: [], -> @Array - Array of[GenericBookmarkLayout](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/GenericDimensionLayout.htm)
 	embeddedmedia: [], -> @Array of [MediaListItem](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/MediaListItem.htm)
-	fields: [], -> @Array of [FieldListDef](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/FieldListDef.htm)
+	fields: [], -> @Array of [NxFieldDescription](https://help.qlik.com/en-US/sense-developer/2.0/Subsystems/EngineAPI/Content/Structs/NxFieldDescription.htm)
 	snapshots: [] -> @Array of Array of [GenericBookmarkLayout](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/GenericDimensionLayout.htm)
 }
 </pre></big> 
