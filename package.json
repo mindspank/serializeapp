@@ -1,6 +1,6 @@
 {
   "name": "serializeapp",
-  "version": "2.2.0",
+  "version": "3.0",
   "description": "Serializes a Qlik Sense App into JSON",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,5 @@
   },
   "homepage": "https://github.com/mindspank/serializeapp",
   "license": "MIT",
-  "dependencies": {
-    "promise": "^7.0.4"
-  }
+  "dependencies": {}
 }

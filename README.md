@@ -1,17 +1,20 @@
-##serializeapp
+## serializeapp
 
 serializeapp is a node utility module to serialize a Qlik Sense app into a JSON object.  
-Pass it a [qsocks](https://github.com/mindspank/qsocks) app class and it returns the JSON representation of that app.
+Pass it a [qsocks](https://github.com/mindspank/qsocks) or a [enigma.js](https://github.com/qlik-oss/enigma.js) app object and it returns a promise containing the JSON representation of that app.
 
-Returns a promise as standard but also accepts classical node style callbacks.  
 Verified to work in the browser using browserify or webpack.  
 
-##installing
+## installing
 ```
 npm install serializeapp
 ```
+or
+```
+yarn add serializeapp
+```
 
-##examples
+## examples
 
 Connect to Qlik Sense Desktop, open a app and pass that into serializeapp.
 
@@ -19,21 +22,30 @@ Connect to Qlik Sense Desktop, open a app and pass that into serializeapp.
 var qsocks = require('qsocks')
 var serializeapp = require('serializeapp')
 
-qsocks.Connect().then(function(global) {
-	
-	global.openDoc('Executive Dashboard.qvf')
-		.then(function(app) {
-			return serializeapp(app);
-		})
-		.then(function(data) {
-			console.log(data) // --> A JSON Object describing the app.
-		})
-	
-})
-
+qsocks.Connect()
+.then(global => global.openDoc('Executive Dashboard.qvf'))
+.then(app => serializeapp(app))
+.then(result => console.log(result))
 ```
+```javascript
+const serializeapp = require('serializeapp')
+const enigma = require('enigma.js')
+const WebSocket = require('ws')
 
-##Returns
+enigma.getService('qix', {
+    schema: require(`./node_modules/enigma.js/schemas/qix/3.2/schema.json`),
+    session: {
+        host: 'localhost',
+        port: 4848,
+        secure: false
+    },
+    createSocket: (url) => new WebSocket(url)
+})
+.then(qix => qix.global.openDoc('Executive Dashboard.qvf'))
+.then(app => serializeapp(app))
+.then(result => console.log(result))
+```
+## Returns
 <big><pre>
 {
 	properties: {}, -> @Object [AppEntry](https://help.qlik.com/sense/2.0/en-us/developer/Subsystems/EngineAPI/Content/Structs/AppEntry.htm)
