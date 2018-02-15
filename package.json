@@ -26,5 +26,7 @@
   },
   "homepage": "https://github.com/mindspank/serializeapp",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "promise": "^8.0.1"
+  }
 }
